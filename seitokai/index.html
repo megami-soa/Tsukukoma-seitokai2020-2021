@@ -1,0 +1,1835 @@
+<html>
+	<head>
+    
+    
+    
+    <meta name="description" content="説明文">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta property="og:url" content="tsukukoma/seitokai">
+    <meta property="og:title" content="筑駒　中学生徒会">
+    <meta property="og:description" content="説明文">
+    <meta property="og:image" content="images/画像の場所を追加">
+    <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Cardo" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <title>筑駒　中学生徒会</title>
+    
+    <div class="start">
+      <p><video autoplay muted src="shuwapiki.mp4"　id="video"></video></p>
+    </div>
+    <style type="text/css">
+        body{
+            margin:0px;
+        }
+        
+      .main_h {
+  position: fixed;
+  top: 0px;
+  max-height: 70px;
+  z-index: 999;
+  width: 100%;
+  padding-top: 17px;
+  background: none;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+  top: -100px;
+  padding-bottom: 6px;
+  font-family: "Montserrat", sans-serif;
+}
+@media only screen and (max-width: 766px) {
+  .main_h {
+    padding-top: 25px;
+  }
+}
+
+ .logo {
+            display: inline-block;
+            transition: all .3s ease 0s;
+            text-decoration: none;
+         
+        }
+        .logo:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+        .icon{
+            width: 35%;
+        }
+.sticky {
+  background-color: rgba(255, 255, 255, 0.93);
+  opacity: 1;
+  top: 0px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.logo {
+  width: 150px;
+  float: left;
+  display: block;
+  margin-top: 0;
+}
+@media only screen and (max-width: 766px) {
+  .logo {
+    float: none;
+  }
+}
+
+
+
+
+.row {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 2%;
+}
+       
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            color: #8f8f8f;
+            padding-top: 0px;
+            font-family: "Cardo", serif;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            z-index: 1000;
+        }
+        a {
+            text-decoration: none;
+            font-size: 30px;
+            font-family:  sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: black;
+            font-size: 40px;
+            line-height: 1.8;
+            text-transform: uppercase;
+            font-family: 'arial unicode ms';
+        }
+        h3{
+            font-size: 25px;
+            font-family: 'Hiragino Kaku Gothic Pro';
+            padding-left: 5px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            line-height: 2;
+        }
+        .content {
+            padding: 50px 2% 250px;
+        }
+        @media screen and (min-width:1024px) {
+            .hero {
+                position: relative;
+                background-color: white;
+                -webkit-background-size: cover;-moz-background-size: cover;
+                background-size: cover;
+                text-align: center;
+                padding-top: 110px;
+                min-width: 100%;
+                min-height: 100%;
+                letter-spacing: 2px;
+                font-family: "Montserrat", sans-serif;z-index: 3000;padding: 0px;
+                margin: 0px;
+            }
+        }      
+        @media only screen and (min-width:640px) and (max-width:1023px) {
+            .hero {
+                position: relative;
+                background-color: white;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                background-size: cover;
+                text-align: center;
+                padding-top: 110px;
+                min-width: 100%;
+                min-height: 100%;
+                letter-spacing: 2px;
+                font-family: "Montserrat", sans-serif;
+                z-index: 3000;
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+        @media screen and (max-width:639px) {
+            .hero {
+                position: relative;
+                background-color: white;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                background-size: cover;
+                text-align: center;
+                padding-top: 110px;width: 100%;height: 50%;
+                letter-spacing: 2px;
+                font-family: "Montserrat", sans-serif;
+                z-index: 3000;
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+        @-webkit-keyframes scroll {
+            0% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translateY(20px);
+                transform: translateY(20px);
+            }
+        }
+        @keyframes scroll {
+            0% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translateY(20px);
+                -ms-transform: translateY(20px);
+                transform: translateY(20px);
+            }
+        }
+        ul{
+            list-style: none; 
+        }
+        .start {
+            background: #1e8100;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 9000;
+            padding: 0px;
+            margin: 0px;
+        }
+       .start p {
+           position: fixed;
+           left: 0%;
+           top: 0%;
+           margin: 0px;
+           padding: 0px;
+           display: none;
+           z-index: 9999;
+           width: 100%;
+           height: 100%;
+           text-align: center;
+        }
+        .start video{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            -webkit- transform: translateY(-50%) translateX(-50%);
+            width: 100vw;
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        .fadein{
+            width: 100%;
+            opacity : 1;
+            transform : translate(0, 0);
+        }
+        .sp{
+            width: 30%;
+        }
+        .ep{
+            width: 20%;
+        }
+        @media screen and (max-width:639px) {
+            .spr{display:none}
+        }
+        @media only screen and (min-width:640px) and (max-width:1023px) {
+            .spr{
+                width: 70%;
+                float:right;}
+        }
+        @media screen and (min-width:1024px) {
+            .spr{
+                width: 70%;
+                float:right;}
+        }     
+        @media screen and (max-width:639px) {
+            .fream{
+                width:100%;
+                height:50%;
+                text-align: center;
+            }  
+        }
+        @media only screen and (min-width:640px) and (max-width:1023px) {
+            .fream{
+                width:100%; 
+                height:100%;
+                text-align: center;
+            }  
+        }
+        @media screen and (min-width:1024px) {
+            .fream{
+                width:100%;
+                height:100%;
+            }
+        }     
+
+        .club {
+         border-top: solid  #4db04f;
+       }
+       .gyoji{
+           border-bottom: solid #4db04f;
+           border-top: solid  #4db04f;
+       }
+        .sec00{
+            border-bottom: solid #4db04f;
+            border-top: solid  #4db04f;
+           }
+        .sec01{
+            border-bottom: solid #4db04f;
+            border-top: solid  #4db04f;
+            }
+        .sec02{
+            border-bottom: solid #4db04f;
+            border-top: solid  #4db04f;
+            }
+        .sec03{
+            border-bottom: solid #4db04f;
+            border-top: solid  #4db04f;
+            }
+        .sec04{
+            border-bottom: solid #4db04f;
+            border-top: solid  #4db04f;
+           }
+        .sec05{
+            border-bottom: solid #4db04f;
+            border-top: solid  #4db04f;
+        }
+        .sec06 h1{
+            border-bottom: solid #4db04f;
+            border-top: solid  #4db04f;
+        }
+        .sec06{
+            text-align: center;
+        }
+        @media screen and (max-width:639px) {
+            .photo{
+                width: 100%;
+                height: 70%;
+               
+            }
+        }
+   
+@media only screen and (min-width:640px) and (max-width:1023px) {
+    .photo{
+         width: 100%;
+        height:70%;
+          
+       }
+}
+  
+@media screen and (min-width:1024px) {
+  .photo{
+         width: 1000px;
+        height:80%;
+      padding-bottom: 90px;
+       
+       }
+}     
+       
+      
+       
+      
+     
+       
+.nante {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.nante::before,
+.nante::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.nante,
+.nante::before,
+.nante::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.nante {
+  background-color: #006400;
+  color: #fff;
+}
+.nante:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.koute {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.koute::before,
+.koute::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.koute,
+.koute::before,
+.koute::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.koute {
+  background-color: #006400;
+  color:  #fff;
+}
+.koute:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+.yakyu {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.yakyu::before,
+.yakyu::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.yakyu,
+.yakyu::before,
+.yakyu::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.yakyu {
+  background-color: #006400;
+  color: #fff;
+}
+.yakyu:hover {
+  background-color: #fff;
+  color: #000;
+}
+      
+       
+.basuke {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.basuke::before,
+.basuke::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.basuke,
+.basuke::before,
+.basuke::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.basuke {
+  background-color: #006400;
+  color: #fff;
+}
+.basuke:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.takyu {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.takyu::before,
+.takyu::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.takyu,
+.takyu::before,
+.takyu::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.takyu {
+  background-color: #006400;
+  color: #fff;
+}
+.takyu:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.kendo {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.kendo::before,
+.kendo::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.kendo,
+.kendo::before,
+.kendo::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.kendo {
+  background-color: #006400;
+  color: #fff;
+        }
+.kendo:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+.rikujo {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.rikujo::before,
+.basuke::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.rikujo,
+.rikujo::before,
+.rikujo::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.rikujo {
+  background-color: #006400;
+  color: #fff;
+}
+.rikujo:hover {
+  background-color: #fff;
+  color:#000;
+}
+       
+.sakka {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.sakka::before,
+.sakka::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.sakka,
+.sakka::before,
+.sakka::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.sakka {
+  background-color: #006400;
+  color: #fff;
+}
+.sakka:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.hand {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.hand::before,
+.hand::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.hand,
+.hand::before,
+.hand::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.hand {
+  background-color: #006400;
+  color: #fff;
+}
+.hand:hover {
+  background-color: #fff;
+   color: #000;
+}
+       
+       
+.noyama {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.noyama::before,
+.noyama::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.nayama,
+.noyama::before,
+.noyama::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.noyama {
+  background-color: #006400;
+  color: #fff;
+}
+.noyama:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.suiei {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.suiei::before,
+.suiei::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.suiei,
+.suiei::before,
+.suiei::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.suiei {
+  background-color: #006400;
+  color: #fff;
+}
+.suiei:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+.jag {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+  border : solid 2px #000 ;
+}
+.jag::before,
+.jag::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.jag,
+.jag::before,
+.jag::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.jag {
+  background-color: #006400;
+  color: #fff;
+}
+.jag:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+    
+.kagaku {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.kagaku::before,
+.kagaku::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.kagaku,
+.kagaku::before,
+.kagaku::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.kagaku {
+  background-color: #006400;
+  color: #fff;
+}
+.kagaku:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.seibutu {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.seibutu::before,
+.nante::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.seibutu,
+.seibutu::before,
+.seibutu::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.seibutu {
+  background-color: #006400;
+  color: #fff;
+}
+.seibutu:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.ongaku {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.ongaku::before,
+.ongaku::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.ongaku,
+.ongaku::before,
+.ongaku::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.ongaku {
+  background-color: #006400;
+  color: #fff;
+}
+.ongaku:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.komaki {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.koamki::before,
+.komaki::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.koamki,
+.komaki::before,
+.komaki::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.komaki {
+  background-color: #006400;
+  color: #fff;
+}
+.komaki:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.ori {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.ori::before,
+.ori::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.ori,
+.ori::before,
+.ori::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.ori{
+  background-color: #006400;
+  color: #fff;
+}
+.ori:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.syogi{
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.syogi::before,
+.syogi::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.syogi,
+.syogi::before,
+.syogi::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.syogi {
+  background-color: #006400;
+  color:#fff;
+}
+.syogi:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+.engi {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.engi::before,
+.engi::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.engi,
+.engi::before,
+.engi::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.engi {
+  background-color: #006400;
+  color: #fff;
+}
+.engi:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+       
+.suken {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.suken::before,
+.suken::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.suken,
+.suken::before,
+.suken::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.suken {
+  background-color: #006400;
+  color: #fff;
+}
+.suken:hover {
+  background-color: #fff;
+  color: #000;
+}
+      
+.pazu {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.pazu::before,
+.pazu::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.pazu,
+.pazu::before,
+.pazu::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.pazu {
+  background-color: #006400;
+  color: #fff;
+}
+.pazu:hover {
+  background-color: #fff;
+  color:  #000;
+}
+       
+.paken {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.paken::before,
+.paken::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.paken,
+.paken::before,
+.paken::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.paken {
+  background-color: #006400;
+  color: #fff;
+}
+.paken:hover {
+  background-color: #fff;
+  color: #000;
+}
+      
+.gogaku {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.gogaku::before,
+.gogaku::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.gogaku,
+.gogaku::before,
+.gogaku::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.gogaku{
+  background-color: #006400;
+  color: #fff;
+}
+.gogaku:hover {
+  background-color: #fff;
+  color: #000;
+}
+       
+.bungei {
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+   border : solid 2px #000 ;
+}
+.bungei::before,
+.bungei::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.bungei,
+.bungei::before,
+.bungei::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.bungei{
+  background-color: #006400;
+  color: #fff;
+}
+.bungei:hover {
+  background-color: #fff;
+  color: #000;
+}
+.skipp{
+        width: 100%;
+        
+    
+        }
+.Copyright{
+    font-family: sans-serif;
+    font-size: 15px;
+    text-align: center;
+        }
+      
+nav {
+  float: right;
+  width: 80%;
+}
+@media only screen and (max-width: 766px) {
+  nav {
+    width: 100%;
+  }
+}
+nav ul {
+  list-style: none;
+  overflow: hidden;
+  text-align: right;
+  float: right;
+}
+@media only screen and (max-width: 766px) {
+  nav ul {
+    padding-top: 10px;
+    margin-bottom: 22px;
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
+}
+nav ul li {
+  display: inline-block;
+  margin-left: 35px;
+  line-height: 1.5;
+  
+}
+@media only screen and (max-width: 766px) {
+  nav ul li {
+    width: 100%;
+    padding: 7px 0;
+    margin: 0;
+  }
+}
+nav ul a {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+
+.nn {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+}
+.nn::after {
+	position: absolute;
+	content: '';
+	bottom: .2em;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	opacity: 0;
+	background: #239e44;
+	transition: all .3s ease 0s;
+}
+.nn:hover {
+	cursor: pointer;
+        }
+.nn:hover::after {
+	bottom: 0;
+	opacity: 1;
+        }
+
+       
+       
+#pagetop{
+    position:fixed;
+    right:10px;
+    bottom:0px;
+    cursor:pointer;
+    z-index: 10;
+        }
+
+       
+        .mapbtn img{
+            border: solid 1px;
+            border-color: black;
+            transition: 0.5s;
+        }
+        .mapbtn img:hover{
+            transform: scale(0.9,0.9);
+
+        } 
+.btn{
+     width: 10%;
+     
+       }
+   
+         @media screen and (max-width:639px) {
+.active{
+    width: 10%;
+   
+}
+.himitu {
+  position: relative;
+}
+.himitu .active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0.2s; 
+}
+.himitu:hover .active {
+  opacity: 1;
+}
+}
+   
+@media only screen and (min-width:640px) and (max-width:1023px) {
+.active{
+    width: 10%;
+   
+}
+.himitu {
+  position: relative;
+}
+.himitu .active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0.2s; 
+}
+.himitu:hover .active {
+  opacity: 1;
+}
+}
+  
+@media screen and (min-width:1024px) {
+ .active{
+    width: 10%;
+   
+}
+.himitu {
+  position: relative;
+}
+.himitu .active {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.2s; 
+}
+.himitu:hover .active {
+  opacity: 1;
+}
+}           
+
+    
+
+dl.case1{
+    margin:35px;
+    padding:0;
+    line-height:1.8;
+    width:100%;
+}
+dl.case1 dt{
+    width:6em;
+    float:left;
+    margin:0;
+    padding:0 0 0 5px;
+}
+dl.case1 dd{
+    margin:0 0 10px;
+    padding:0 5px 10px 8em;
+    border-bottom:1px dotted #ccc;
+}    
+dl.case1 a{
+    color: #239e44;    
+    border-bottom: solid 3px #249e44;       
+       }
+dl.case1 a:hover{
+    background-color: #fffda1;
+           
+       }       
+       
+    @media screen and (max-width:639px) {
+.case1 a{
+    font-size: 20px;
+        }
+}
+   
+@media only screen and (min-width:640px) and (max-width:1023px) {
+.case1 a{
+    font-size: 30px;
+        }
+}
+  
+@media screen and (min-width:1024px) {
+ .case1 a{
+    font-size: 30px;
+        }
+}           
+       
+       
+.hero{
+
+    background-repeat:no-repeat; 
+    background-attachment:fixed;
+    background-position:top;
+    background-size: 100%;
+    top: 0;
+    left: 0;
+}
+.hero img{
+    width: 100%;
+       
+    }
+@media screen and (max-width:639px) {
+.top{
+    width: 100px;
+       }  
+}
+   
+@media only screen and (min-width:640px) and (max-width:1023px) {
+.top{
+     width: 200px;
+       }  
+}
+  
+@media screen and (min-width:1024px) {
+.top{
+     width: 200px;
+       }  
+}           
+  
+           
+   .skip {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 37px;
+  color: #249e44;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.32), 0px 1px 0px #6182ca, 0px 2px 0px #4f6aa7, 0px 3px 0px #5470ad;
+  text-align:center;
+}
+.skip:active {
+  top: 4px;
+  text-shadow: none;
+}    
+
+.key{
+    color: #239e44;
+    font-family: 'arial unicode ms';
+    font-size: 20px;
+        }
+
+
+
+.menber p{
+    color: #239e44;
+    font-family: 'arial unicode ms';
+    font-size: 20px;
+       }  
+       
+     
+.yurei{
+           
+     display:inline;
+     border-bottom: solid 2px red;
+       }
+.yobi{
+     display:inline;
+       }
+.yubi{
+    display:inline;
+       }
+.komejirusi{
+    font-family: 'arial unicode ms';
+    font-size: 20px;
+    color: red;
+       }
+        .hosoku{
+            font-family: sans-serif;
+        }
+       
+.dayimg img{
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+       }
+.seisyunback{
+       background-repeat: repeat-y;
+       width: 100%;
+        }
+
+.adjustment{
+    height: 50px;
+        }
+
+     </style>
+</head>
+<script>
+function Settoday(){
+var today = new Date() ;
+var weekday = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ] ;  
+document.getElementById(weekday[today.getDay()]).style.display="block";
+}
+</script>
+    
+
+
+
+<body onload="Settoday();">
+<header class="main_h">
+    
+    
+    
+   
+
+    
+    
+    
+    
+    <div class="row">
+        <a class="logo" href="#" ><img src="icon1.png" class="icon" alt="ロゴ"></a>
+       
+
+
+        <nav>
+            <ul>
+                <li><a class="nn" href=".sec00">生徒会とは</a></li>
+                <li><a class="nn" href=".sec01">主な活動</a></li>
+                <li><a class="nn" href=".sec02">部活紹介</a></li>
+                <li><a class="nn" href=".sec03">ニュース</a></li>
+                <li><a class="nn" href=".sec04">フォト</a></li>
+                <li><a class="nn" href=".sec05">メンバー</a></li>
+            </ul>
+        </nav>
+
+       
+
+    </div> <!-- / row -->
+
+</header>
+    <div id="pagetop" hidden>
+      <img src="tomeisozai.png" class="top"　alt="topに戻るボタン">
+    </div>
+    
+    
+    <div class="hero">
+      <div class="dayimg">
+        <div id="Sun" style="display:none;">
+            <img src="tsukukoma1.png"　alt="日曜日の写真">
+        </div>
+        <div id="Mon" style="display:none;">
+            <img src="tsukukoma2.png"　alt="月曜の写真">
+          </div>
+          <div id="Tue" style="display:none;">
+              <img src="tsukukoma1.png" alt="火曜日の写真">
+          </div>
+          <div id="Wed" style="display:none;">
+              <img src="tsukukoma4.png"　alt="水曜日の写真">
+          </div>
+          <div id="Thu" style="display:none;">
+              <img src="tsukukoma2.png"　alt="木曜日の写真">
+          </div>
+          <div id="Fri" style="display:none;">
+              <img src="tsukukoma3.png"　alt="金曜日の写真">
+          </div>
+          <div id="Sat" style="display:none;">
+              <img src="tsukukoma4.png"　alt="土曜日の写真">
+          </div>
+        </div>
+    </div>
+   
+
+
+    <div class="row content">
+      
+        <h1 class="sec00" id="section1">生徒会とは</h1>
+        <img src="seitokai_pic.png" class="fadein"　alt="生徒会とは">
+        <h1 class="sec01">主な活動</h1>
+        <iframe src="gyoujitk20.html" width="100%" height="150%" class="gyoji"></iframe>
+        
+        <div class="bukatsusyoukai"> 
+            <h1 class="sec02">部活紹介</h1>
+            <h3>運動部</h3>
+            <img src="taiiku.jpeg" class="spr"　alt="体育系部活">
+            <img src="soccer%20person.png" class="sp"　alt="体育系部活イメージ">
+            <ul>
+                <li> <a  class="nante" href="softtennistk20.html"　 target="_blank">軟式テニス部</a></li>
+                <li> <a  class="koute" href="tennisutk20.html"　 target="_blank">テニス部</a></li>
+                <li> <a  class="yakyu" href="baseballtk20.html"　 target="_blank">野球部</a></li>
+                <li><a class="basuke" href="basketballtk20.html"　 target="_blank">バスケ部</a></li>
+                <li>  <a  class="takyu" href="tabletennistk20.html"　 target="_blank">卓球部</a></li>
+                <li> <a  class="kendo" href="kendotk20.html"　 target="_blank">剣道部</a></li>
+                <li>  <a  class="rikujo" href="rikujotk20.html"　 target="_blank">陸上部</a></li>
+                <li> <a  class="sakka"　href="soccertk20.html"　 target="_blank">サッカー部</a></li>
+                <li> <a  class="hand" href="handballtk20.html"　 target="_blank">ハンド部</a></li>
+                <li> <a  class="noyama" href="noyamatk20.html"　 target="_blank">野山を愛する会</a></li>
+                <li> <a  class="suiei" href="swimmingtk20.html"　 target="_blank">水泳部</a></li>
+                <li> <a  class="jag" href="jugglertk20.html"　 target="_blank">ジャグリング同好会</a></li>
+            </ul>  
+            <h3>文化部</h3>
+            <img src="TEST.png" class="spr"　alt="文化系部活">
+            <img src="bunka.png" class="ep"　alt="文化系部活イメージ">
+            <ul>
+                <li><a  class="kagaku" href="sciencetk20.html"　 target="_blank">科学部</a></li>
+                <li> <a  class="seibutu" href="biologytk20.html"　 target="_blank">生物部</a></li>
+                <li>  <a  class="ongaku" href="musictk20.html"　 target="_blank">音楽部</a></li>
+                <li>  <a  class="komaki" href="komakitk20.html"　 target="_blank">駒場棋院</a></li>
+                <li> <a class="ori" href="orikentk20.html"　 target="_blank">折り紙研究会</a></li>
+                <li> <a  class="syogi" href="syogitk20.html"　 target="_blank">将棋部</a></li>
+                <li> <a  class="engi" href="engekitk20.html"　 target="_blank">演劇部</a></li>
+                <li> <a  class="suken" href="mathtk20.html"　 target="_blank">数学研究会</a></li>
+                <li> <a  class="pazu" href="puzzletk20.html"　 target="_blank">パズル部</a></li>
+                <li>  <a  class="paken" href="pakentk20.html"　 target="_blank">パソコン研究会</a></li>
+                <li> <a  class="gogaku" href="gogakutk20.html"　 target="_blank">語学部</a></li>
+                <li> <a  class="bungei" href="bungeitk20.html"　 target="_blank">文芸部</a></li>
+            </ul>
+        </div>
+        <div class="news">
+            <h1 class="sec03">ニュース</h1>
+            <p>※ニュース詳細ページは現在制作中なのでご覧いただけません</p>
+            <dl class="case1">
+                <dt>2020.6.20</dt>
+                <dd><a href="##">生徒会主催のイベントを開催します</a></dd>
+                <dt>2020.6.10</dt>
+                <dd><a href="##">公式ホームページを公開しました</a></dd>
+            </dl>
+        </div> 
+        
+        <div class="photo">
+            <h1 class="sec04">フォト</h1>
+            <iframe src="photo.html" class="fream"></iframe>
+        </div>
+        <div class="menber">
+            <h1 class="sec05">メンバー(74期生へのメッセージ)</h1>
+            <nav class="skipp">
+            <a href=".sec06"><h3 class="skip">SKIP!</h3></a>
+            </nav>
+            <h4 class="hosoku">それぞれの人の文章のなかの一単語をクリックorタッチすると、何かが現れます。（例：生徒会長の文章の中の「フレンドリー」という単語をクリックorタッチしてみてください。）</h4>
+            <h1>中学生徒会長　麻生晃成</h1>
+            <p>今年度より中学生徒会長となりました、72期の麻生晃成(あそお こうせい)と申します。まずは74期の皆さんご入学おめでとうございます。新入生の皆さんはこれから筑駒の生活に少しづつ慣れていって欲しいと思います。</p>
+            <p class="yubi">さて、自分のことについて語っていきたいと思います。所属部活は野球部と農芸部とパ研</p><p class="yurei">(幽霊)</p><p class="yobi">です。</p>
+            <p>特に野球部ではライトを中心に活動しています。私は中学から始めましたが、先輩方の手厚い指導のおかげで活躍できています。野球部なら初心者も絶対に上達する！先輩も<a class="key" onclick="friendclick()">フレンドリー</a>で優しい！（多分）74期の皆さんはぜひ野球部の新歓に行ってみてください。</p>
+            <p>新型コロナウイルスの影響もあり今後も柔軟な対応が求められますが、なるべく皆さんにわかりやすい情報をお届けするように尽力します。
+            また、留学座談会などの新たな政策もどんどん進めていきたいと思っています。これから一年、どうぞよろしくお願い致します。</p>
+             <img src="friendly.png" class="seisyunback" id="friendback"　alt="フレンドリー画像">
+            <h1>副会長(3年生) 岩倉治輝</h1>
+            <p>今年度より中学生徒副会長になりました、岩倉治輝（いわくら はるき）と申します。まずは74期のみなさん、ご入学おめでとうございます。これから筑駒に少しずつ慣れて、中学生活をおおいに楽しんでください。</p>
+            <p>ではここで、簡単に自己紹介をしたいと思います。所属部活はパ研（パーソナルコンピュータ研究部）と鉄道研究部と筑駒Jugglersです。パ研に入るには高度なプログラミングの知識が必要そうに見えますが、実は僕も含め今の部員のほとんどは中学入学時点でプログラミング未経験者です。でも、先輩方が丁寧に教えてくれるので、初心者でも上達できます！皆さんぜひ、パ研の新歓部会へ足を運んでみてください。</p>
+            <p>今年は例年と違うことも多くありますが、生徒会の円滑な運営と公約の実現を目指し、１年間<a class="key" onclick="zenryokuclick()">全力</a>で活動したいと思います。どうぞよろしくお願いします。</p>
+            <img src="zenryoku.png" class="seisyunback" id="zenryokuback"　alt="全力画像">
+            
+            <h1>副会長(2年生)　松村奏和</h1>
+            
+            <p>今年度より中学生徒副会長になりました、松村奏和（まつむら　そあ）と申します。</p>
+            <p>僕は偉そうなことを言っても説得力がないと思うので、まず一年間筑駒で過ごしてみて、素直に感じたことを伝えたいと思います。周りにはハイレベルな友達がたくさんいて、常に刺激を与えられる環境の中で、勉強はもちろん行事でも、「自分らしさ」を出来る限り発揮したい、と僕は思って生活を送っています。努力が報われなくて悔しかったことも、バカをやって叱られたことも今の自分を作っている大切な経験です。もっとも、人には様々な楽しみ方があります。休み時間風に吹かれながら虚無っていたり、ゲームをして一喜一憂したりするのもまた、楽しいのだと思います。そうやって自分の中で楽しみを見つけていく、もしくは作り出していけるのがこの学校だと思っています。僕が思うに筑駒での生活での<a class="key"  onclick="keyclick()">鍵</a>は"自立と信頼"なのではないかと<a class="key"  onclick="key2click()">勝手</a>に思っています。自立することと、他人を信頼すること、それが成長につながるのだと思います。僕は常に周りの人との距離とコミュニケーションを考えて行動したいと思っています。やはり、仲の良し悪しや、一人に対してなのか全体に対してコミュニケーションをとるのでは違ってきますよね。まあそんなこと言ってても考える前に行動しちゃうんですけど、、、まあ考えずに行動しないというのも時には必要ですから。余談でした。</p>
+            <p>長くなりましたが、濃密で、甘酸っぱくなくても<a class="key" onclick="seisyunclick()">青春は送れます。</a>どうぞ、楽しんでください。</p>
+            <h4 class="komejirusi">※あくまでも私個人の考えです。</h4>
+            <img src="seisyun.png" class="seisyunback" id="seisyunback"　alt="青春画像">
+        </div>
+        <div class="sec06">
+            <h1>お問い合わせ</h1>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevXjcaoKFzr1QdUpJNT4UtRz1wamFhgXJDa8HEDvjmpZ06XQ/viewform?embedded=true" width="640" height="1344" frameborder="0" marginheight="0" marginwidth="0">GOOGLR FORMを読み込んでいます…</iframe>
+        </div>
+    </div>
+    <footer>
+        <div class="map">
+            <div class="kosya">
+                <img src="kosya.png" width="100%"　alt="校舎イメージ">
+            </div>
+            <div>
+                <h3>※生徒会理念/more 生徒会の活動/気まぐれ日記のページは現在制作中ですのでご覧いただけません。</h3>
+            </div>
+            <div class="mapbtn">
+                <a href="https://www.komaba-s.tsukuba.ac.jp" target="_blank"><img src="kosiki.png" width="23%"　alt="公式HPボタン"></a>　
+                <a href="file:///Volumes/SOAUSB/seitokai/rinen_xd/Web_1920___1.html" target="_blank"><img src="rinen.png" width="23%"　alt="理念ボタン"></a> 
+                <a href="#####" target="_blank"><img src="moreseitokai.png" width="23%"　alt="more生徒会ボタン"></a>
+                <a href="kimagurenikki.html" target="_blank"><img src="kimagure.png" width="23%"　alt="気まぐれボタン"></a>
+            </div>
+            <div>
+                <p class="Copyright">&copy;2020 Tsukukoma Seitokai Public Relations Div.  All rights reserved.&hearts;</p>
+                <p class="Copyright">&lang;Production&rang;&spades;Soa Matsumura(Student Council Vice President,73rd)</p>
+                <p class="Copyright">&lang;Cooperation&rang;&clubs;Rintaro Usui(73rd)&diams;Hiroki Kuroda(73rd)</p>
+            </div>
+            <div class="adjustment">
+            </div>
+            <div class="himitu">
+               
+                <input type="image" src="himitu.png" value="内部生" class="btn" id="secret"　alt="秘密の扉">
+                 <input type="image" src="himitu2.png" value="内部生" onclick="gate();" class="active" id="secret2"　alt="秘密の開いた扉">
+                
+            </div>
+                
+        </div>
+    </footer>
+   
+    <script>   
+         
+        function no_scroll() {
+            document.addEventListener("mousewheel", scroll_control, { passive: false });
+            document.addEventListener("touchmove", scroll_control, { passive: false });
+        }
+        function return_scroll() {
+            document.removeEventListener("mousewheel", scroll_control, { passive: false });
+            document.removeEventListener('touchmove', scroll_control, { passive: false });
+        }
+        function scroll_control(event) {
+            event.preventDefault();
+        }
+        
+        $( window ).ready(function(){
+            var video = document.getElementsByTagName('video')[0];
+            video.addEventListener('ended', function() {
+                video.autoplay=false;
+                $('.start').fadeOut(500);
+                return_scroll();
+            }, false);
+        });
+        $(function() {
+            setTimeout(function(){
+                no_scroll();
+                $('.start p').fadeIn(000);
+            },00); 
+        });
+        
+       $(window).scroll(function() {
+
+    if ($(window).scrollTop() > 100) {
+        $('.main_h').addClass('sticky');
+    } else {
+        $('.main_h').removeClass('sticky');
+    }
+});
+        
+        $('nav a').click(function(event) {
+            var id = $(this).attr("href");
+            var offset = 70;
+            var target = $(id).offset().top - offset;
+            $('html, body').animate({
+                scrollTop: target
+            }, 500);
+            event.preventDefault();
+        });
+     
+        $(function(){
+            var topBtn=$('#pagetop');
+            topBtn.hide();
+            $(window).scroll(function(){
+                if($(this).scrollTop()>800){
+                    topBtn.fadeIn();
+                }else{
+                    topBtn.fadeOut();
+                } 
+            });
+            topBtn.click(function(){
+                $('body,html').animate({
+                    scrollTop: 0},500);
+                return false;
+            });
+        });
+        
+        document.getElementById("secret").style.display ="none";
+        
+        function keyclick(){
+            const secret = document.getElementById("secret");
+            
+            if(secret.style.display=="block"){
+                
+                secret.style.display ="none";
+            }else{
+                
+                secret.style.display ="block";
+            }
+        }
+        
+          document.getElementById("secret2").style.display ="none";
+        
+        function key2click(){
+            const secret = document.getElementById("secret2");
+            
+            if(secret2.style.display=="block"){
+                
+                secret2.style.display ="none";
+            }else{
+                
+                secret2.style.display ="block";
+            }
+        }
+        
+              document.getElementById("seisyunback").style.display ="none";
+        
+        function seisyunclick(){
+            const seisyunback = document.getElementById("seisyunback");
+            
+            if(seisyunback.style.display=="block"){
+                
+                seisyunback.style.display ="none";
+            }else{
+                
+                seisyunback.style.display ="block";
+            }
+        }
+         document.getElementById("zenryokuback").style.display ="none";
+        
+        function zenryokuclick(){
+            const zenryokuback = document.getElementById("zenryokuback");
+            
+            if(zenryokuback.style.display=="block"){
+                
+                zenryokuback.style.display ="none";
+            }else{
+                
+                zenryokuback.style.display ="block";
+            }
+        }
+         document.getElementById("friendback").style.display ="none";
+        
+        function friendclick(){
+            const friendback = document.getElementById("friendback");
+            
+            if(friendback.style.display=="block"){
+                
+                friendback.style.display ="none";
+            }else{
+                
+                friendback.style.display ="block";
+            }
+        }
+        
+        function gate() {
+            var UserInput = prompt("パスワードを入力して下さい:","");
+            location.href = UserInput + ".html";
+        }
+    </script>
+    </body>   
+</html>

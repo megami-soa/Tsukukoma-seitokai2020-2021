@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>筑駒生徒会　部活紹介</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="css/bukatsu.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="JavaScript/bukatsu.js"></script>
+    <meta http-equiv="content-type" charset="utf-8">
+      <style>
+      @import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap');
+* {
+  box-sizing: border-box;
+    margin: 0px;
+  padding: 0px;
+ font-family: 'Noto Serif JP', ;
+}
+p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+blockquote {
+  position: relative;
+  padding-left: 1.5rem;
+  
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.05rem;
+}
+blockquote:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background-color: #A9DFBF;
+  border-radius: 60px;
+}
+
+figure {
+  display: -webkit-box;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.hero:nth-child(1) figure {
+  background-color: black;
+
+
+
+.hero:nth-child(1) h2 {
+    left: 0;
+    text-align: center;
+}
+
+}
+.hero:nth-child(1) p {
+    right: 12vw;
+    text-align: left;
+}
+
+.hero-inner {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, auto, auto, 0);
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .hero-inner {
+    clip: unset;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+.hero__title {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+
+  position: fixed;
+  top: 0;
+font-family: 'Noto Serif JP', ;
+  padding: 0 1rem;
+  width: 100%;
+  height: 90%;
+  color: white;
+ 
+  font-weight: 100;
+  font-size: 8vw;
+  /*letter-spacing: -0.125rem;*/
+  text-align: left;
+}
+@media (min-width: 1200px) {
+  .hero__title {
+    font-size: 6rem;
+  }
+}
+
+.content {
+  position: relative;
+  margin: 0 auto 8rem;
+  padding: 2rem;
+}
+.content:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  z-index: 99;
+
+}
+
+.content__inner {
+  margin: 0 auto;
+  max-width: 700px;
+}
+.content__inner > * + * {
+  margin-top: 1.5rem;
+}
+.content__inner > blockquote {
+  margin: 3rem 0;
+}
+
+.content__title {
+
+  font-size: 3rem;
+  line-height: 1.25;
+  letter-spacing: -0.125rem;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .content__title {
+    font-size: 4rem;
+  }
+}
+
+.content__author {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4rem;
+  width: 100%;
+
+  font-size: 1.5rem;
+  letter-spacing: -0.125rem;
+  text-align: center;
+}
+.content__author:before, .content__author:after {
+  content: '';
+  -webkit-box-flex: 1;
+          flex: 1;
+  height: 2px;
+  background-color: #A9DFBF;
+}
+.content__author:before {
+  margin-right: 1rem;
+}
+.content__author:after {
+  margin-left: 1rem;
+}
+
+/*--rogo--*/
+.start {
+  background-color: #336e23;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+
+}
+.start p {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  display: none;
+  z-index: 9999;
+  width: 50%;
+  text-align: center;
+}
+
+.start img{
+  max-width: 30vw;
+  max-height: 50vh;
+}
+.setsumei{
+          display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+
+  position: fixed;
+  top: 15vh;
+
+  padding: 0 1rem;
+  width: 40%;
+  height: 90%;
+    transform: translateX(20%);
+  color: white;
+font-family: 'Noto Serif JP', ;
+  font-weight: 100;
+  font-size: 1.5vw;
+  /*letter-spacing: -0.125rem;*/
+  text-align: left; 
+}
+@media screen (max-width:599px) { 
+ .start img{
+  max-width: 50vw;
+  max-height: 50vh;
+ }
+ .hero__title {
+    left: 25%;
+  }
+    .setsumei{
+        width: 100%;
+        left: 80%;
+        transform: translateX(-50%)
+    }
+}
+ 
+
+@media screen and (min-width:600px) and (max-width:959px) {
+ .start img{
+  max-width: 50vw;
+  max-height: 50vh;
+ }
+ .hero__title {
+    width: 100%;
+  }
+    .setsumei{
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+}
+ 
+
+@media screen and (min-width:960px) and (max-width:1279px) {q
+ .start img{
+  max-width: 50vw;
+  max-height: 50vh;
+ }
+ .hero__title {
+    width: 50%;
+  }
+}
+ 
+
+@media screen and (min-width:1280px) {
+ .start img{
+  max-width: 30vw;
+  max-height: 50vh;
+ }
+ .hero__title {
+    width: 50%;
+  }
+}
+      </style>
+  </head>
+    
+<!-- 紹介文の設定　
+    hero__title：見出し
+    setsumei；説明文
+-->
+  <body>
+    <section class="hero">
+      <div class="hero-inner" id="section-0">
+        <figure></figure>
+        <h2 class="hero__title" style="text-align: left">科学部</h2>
+          <p class="setsumei">科学部は面白い科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白v</p>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-inner" id="section-1">
+        <figure>
+          
+          
+        </figure>
+     
+      </div>
+    </section>
+
+   
+
+   
+<!-- したの説明文の設定 -->
+    <section class="content">
+      <article class="content__inner">
+        <h1 class="content__title">科学部</h1>
+        <h3 class="content__author">科学の甲子園</h3>
+          <p style="text-align: center">科学部について</p><p>科学部はとても楽しい</p>
+          <p>科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白科学部は面白v</p>
+          <h1 style="text-align: center; font-size: 50px">みんな科学部に入ろう！</h1>
+          
+      </article>
+    </section>
+    <!-- 最初に現れる文字・背景の設定 -->
+    <div class="start">
+      <p style="color: white;font-size: 100px;">科学部</p>
+    </div>
+    </body>
+
+</html>
+
