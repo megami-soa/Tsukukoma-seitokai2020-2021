@@ -1,0 +1,10 @@
+body{
+  background-color: gray;
+}
+p{
+  color: #d3d3d3;
+}
+.text1 p{
+  font-size: 15px;
+  margin-left: 20%;
+}
