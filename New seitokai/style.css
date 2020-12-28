@@ -70,15 +70,8 @@ section{
 
 }
 .maintitle.active h1{
-  margin-top: 40px;
-  font-size: 50px;
-　font-weight: bold;
-  letter-spacing: 0px;
-  line-height: 130%;
-  color: #000000;
-  background-image: url(images/BK_smoke.png);
-  background-size: 100% auto;
-  background-position: absolute;
+  /*文字が黒色になって、背景だったBK_smoke.pngを
+  背景画像として切り抜きじゃない形で出したい*/
 }
 .philosophy{
   height: 200%;

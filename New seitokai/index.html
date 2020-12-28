@@ -103,22 +103,7 @@
     </div>
   </body>
   <script>
-  $(function(){
-   $(window).on('scroll',function (){
-     let triggerClass = $('.maintitle');       //トリガーとなるクラス
-         animateClass = ('active');
-
-     $(triggerClass).each(function(){
-       let scroll       = $(window).scrollTop(), //スクロール位置を取得
-           triggerTop   = $(this).offset().top,  //指定要素のY座標
-           windowHeight = $(window).height();    //ウィンドウの高さ
-       // 要素が画面中央に来た時に発火
-       if (scroll > triggerTop - windowHeight / 2){
-         $(this).addClass(animateClass);
-       }
-     });
-   });
-  });
+  //ここには、.maintitleが、画面の真ん中に来たら新しくactiveというクラスを付与するスクリプト
 
 </script>
   </script>
