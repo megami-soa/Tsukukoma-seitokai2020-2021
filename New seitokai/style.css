@@ -7,8 +7,25 @@ body{
 p{
   color: #d3d3d3;
 }
+.top{
+  position: relative;
+}
 .video{
   width: 100%;
+}
+.BtnImage1{
+  min-width: 25%;
+  max-width: 30%;
+  margin-left: 3%;
+  position: absolute;
+  top:65%;
+}
+.BtnImage2{
+  min-width: 25%;
+  max-width: 30%;
+  margin-left: 3%;
+  position: absolute;
+  top:80%;
 }
 .text1 p{
   font-size: 15px;
