@@ -86,17 +86,39 @@
       <div class="playgamebtn">
       </div>
     </div>
+
     <section>
-      <h1>To&thinsp;change&thinsp;the&thinsp;world,<br>change&thinsp;youreself.</h1>
+      <div class="maintitle">
+      <h1 class="main">To&thinsp;&thinsp;change&thinsp;&thinsp;the&thinsp;&thinsp;world&thinsp;,<br>change&thinsp;&thinsp;youreself.</h1>
+　　　 </div>
     </section>
+
     <div class="philosophy">
     </div>
     <div class="">
-    </div>
+    </div>v
     <div>
     </div>
     <div>
     </div>
   </body>
   <script>
+  $(function(){
+   $(window).on('scroll',function (){
+     let triggerClass = $('.maintitle');       //トリガーとなるクラス
+         animateClass = ('active');
+
+     $(triggerClass).each(function(){
+       let scroll       = $(window).scrollTop(), //スクロール位置を取得
+           triggerTop   = $(this).offset().top,  //指定要素のY座標
+           windowHeight = $(window).height();    //ウィンドウの高さ
+       // 要素が画面中央に来た時に発火
+       if (scroll > triggerTop - windowHeight / 2){
+         $(this).addClass(animateClass);
+       }
+     });
+   });
+  });
+
+</script>
   </script>

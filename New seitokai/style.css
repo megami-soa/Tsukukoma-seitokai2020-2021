@@ -48,10 +48,13 @@ p{
   font-size: 15px;
   margin-left: 20%;
 }
+.maintitle{
+  height: 50%;
+}
 section{
   text-align: center;
 }
-section:first-of-type h1{
+.maintitle h1{
   margin-top: 40px;
   font-size: 50px;
 　font-weight: bold;
@@ -65,6 +68,17 @@ section:first-of-type h1{
   -webkit-background-clip: text;/*テキストでくり抜く*/
   -webkit-text-fill-color: transparent;/*くり抜いた部分は背景を表示*/
 
+}
+.maintitle.active h1{
+  margin-top: 40px;
+  font-size: 50px;
+　font-weight: bold;
+  letter-spacing: 0px;
+  line-height: 130%;
+  color: #000000;
+  background-image: url(images/BK_smoke.png);
+  background-size: 100% auto;
+  background-position: absolute;
 }
 .philosophy{
   height: 200%;
