@@ -74,10 +74,10 @@ p{
 }
 
 .maintitle{
-  height: 100%;
+  height: 20%;
 }
 .main{
-  height: 20%;
+  height: 100%;
 }
 section{
   text-align: center;
@@ -99,6 +99,24 @@ section{
 }
 
 
-.philosophy{
-  height: 200%;
+.setsumei1{
+  height: 100%;
+  position: relative;
+}
+.setsumei1 h2,p{
+  margin-left: 15%;
+  color: #fff;
+}
+.setsumei1 h2{
+  margin-top: 25%;
+}
+.explode{
+  width: 100%;
+  padding-right: 10%;
+}
+.video1{
+  position: absolute;
+  width: 50%;
+  top: 0%;
+  margin-left: 50%;
 }
