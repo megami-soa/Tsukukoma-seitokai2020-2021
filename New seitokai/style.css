@@ -18,6 +18,8 @@ p{
 .smBtn{
   height: 40%;
   display: flex;
+  text-align: center;
+  justify-content: center;
 }
 .video{
   width: 100%;
@@ -49,24 +51,25 @@ p{
   top:80%;
 }
 .BtnImage1_sm{
-  min-width: 25%;
+  min-width: 40vw;
   max-width: 30%;
-  margin-left: 3%;
-  margin-top: 3%;
   position: relative;
 }
 .BtnImage2_sm{
-  min-width: 25%;
-  max-width: 30%;
-  margin-left: 3%;
-  margin-top: 3%;
+  max-width: 40vw;
   position: relative;
 }
 .ForExternalsm{
-  width: 40%;
+  width: 40vw;
+  margin: 5%;
+  margin-left: 6.66%;
+  margin-right: 3.33%;
 }
 .ForInternalsm{
-  width: 40%;
+  width: 40vw;
+  margin: 5%;
+  margin-left: 3.33%;
+  margin-right: 6.66%;
   /* float: right; */
 }
 .text1 p{
