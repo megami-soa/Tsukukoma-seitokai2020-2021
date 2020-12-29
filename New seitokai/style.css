@@ -15,6 +15,9 @@ p{
 .top{
   position: relative;
 }
+.smBtn{
+  height: 40%;
+}
 .video{
   width: 100%;
 }
@@ -44,6 +47,13 @@ p{
   position: absolute;
   top:80%;
 }
+.ForExternalsm{
+  width: 40%;
+}
+.ForInternalsm{
+  width: 40%;
+  float: right;
+}
 .text1 p{
   font-size: 15px;
   margin-left: 20%;
@@ -51,7 +61,7 @@ p{
 .maintitle{
   height: 100%;
 }
-.maIn{
+.main{
   height: 100%;
 }
 section{
