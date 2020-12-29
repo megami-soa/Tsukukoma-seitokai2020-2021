@@ -17,6 +17,7 @@ p{
 }
 .smBtn{
   height: 40%;
+  display: flex;
 }
 .video{
   width: 100%;
@@ -47,12 +48,26 @@ p{
   position: absolute;
   top:80%;
 }
+.BtnImage1_sm{
+  min-width: 25%;
+  max-width: 30%;
+  margin-left: 3%;
+  margin-top: 3%;
+  position: relative;
+}
+.BtnImage2_sm{
+  min-width: 25%;
+  max-width: 30%;
+  margin-left: 3%;
+  margin-top: 3%;
+  position: relative;
+}
 .ForExternalsm{
   width: 40%;
 }
 .ForInternalsm{
   width: 40%;
-  float: right;
+  /* float: right; */
 }
 .text1 p{
   font-size: 15px;
