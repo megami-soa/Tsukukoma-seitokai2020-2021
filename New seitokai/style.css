@@ -9,11 +9,14 @@ h1{
   color: #ffffff;
   font-size: 25px;
 }
+h2{
+  margin-bottom: 30px;
+}
 p{
   color: #ffffff;
 }
 a p{
-  color: #005aa8;
+  color: #0083f5;
 }
 .top{
   position: relative;
