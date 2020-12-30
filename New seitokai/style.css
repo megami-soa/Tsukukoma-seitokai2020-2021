@@ -39,6 +39,8 @@ a p{
 }
 .navbar-brand{
   margin-left: 40px;
+  /* min-height: 100%; */
+  min-width: 30%;
 }
 .navbar{
   margin-top: 0;
