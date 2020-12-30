@@ -44,7 +44,15 @@
   color: #FFF;
 }
 
+.slick-slide {
+  transform: scale(.8);
+}
+.slick-current {
+  transform: scale(1);
+}
+
 .our_slider{
   align-content: center;
   padding: 0;
 }
+
