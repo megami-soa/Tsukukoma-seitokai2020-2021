@@ -11,9 +11,11 @@ h1{
 }
 h2{
   margin-bottom: 30px;
+  font-size: 2.6vw;
 }
 p{
   color: #ffffff;
+  font-size: 1.3vw;
 }
 a p{
   color: #0083f5;
@@ -82,7 +84,7 @@ a p{
 
 .maintitle{
   height: 20%;
-  
+
 }
 .main{
   height: 100%;
@@ -112,7 +114,7 @@ section{
   position: relative;
 }
 .setsumei1 h2,p{
-  margin-left: 15%;
+  margin-left: 10%;
   color: #fff;
 }
 .setsumei1 h2{
@@ -125,6 +127,16 @@ section{
 .video1{
   position: absolute;
   width: 50%;
-  top: 0%;
+  top: 0;
   margin-left: 50%;
+}
+@media (min-width: 992px){
+
+}
+@media (min-width: 544px){
+
+}
+
+@media (min-width: 768px){
+
 }
