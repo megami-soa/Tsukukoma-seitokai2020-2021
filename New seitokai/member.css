@@ -1,3 +1,18 @@
+.members{
+  text-align: center;
+}
+.slider{
+  margin: 100px auto;
+  width: 80%;
+}
+.slider img{
+  height: auto;
+  width: 100%;
+}
+.slider p{
+  color: #000;
+}
+
 .member{
   display: inline-block;
   background-color: #FFF;
