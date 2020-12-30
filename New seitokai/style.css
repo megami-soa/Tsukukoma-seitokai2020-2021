@@ -20,6 +20,10 @@ p{
 a p{
   color: #0083f5;
 }
+
+.nav{
+  box-shadow: 5px 5px 30px 5px #1C1C1C;
+}
 .top{
   position: relative;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 10);
@@ -84,7 +88,6 @@ a p{
 
 .maintitle{
   height: 20%;
-
 }
 .main{
   height: 100%;
