@@ -1,5 +1,6 @@
 .members{
   text-align: center;
+  padding-top: 3%;
 }
 .slider{
   margin: 100px auto;
@@ -11,9 +12,6 @@
 }
 .slider p{
   color: #000;
-}
-.margin{
-  height: 30px;
 }
 .member{
   display: inline-block;
@@ -57,4 +55,3 @@
   align-content: center;
   padding: 0;
 }
-
