@@ -1,0 +1,18 @@
+.member{
+  display: inline-block;
+  background-color: #FFF;
+  border-radius: 10px;
+}
+.member img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.slick-prev:before,
+.slick-next:before{
+  font-size: 60px;
+  color: #FFF;
+}
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before{
+  color: #FFF;
+}
