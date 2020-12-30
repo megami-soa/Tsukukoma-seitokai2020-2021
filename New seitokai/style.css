@@ -43,6 +43,7 @@ a p{
 }
 .navbar{
   margin-top: 0;
+  min-width: 30%;
 }
 .hoge1{
   margin-right: 50px;
