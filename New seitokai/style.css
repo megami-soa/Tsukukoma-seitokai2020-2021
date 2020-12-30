@@ -130,13 +130,38 @@ section{
   top: 0;
   margin-left: 50%;
 }
-@media (min-width: 992px){
+@media (max-width: 992px){
 
 }
-@media (min-width: 544px){
+@media (max-width: 768px){
+  .setsumei1{
+    height: 100%;
+    text-align: center;
+  }
+  .setsumei1 h2,p{
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    color: #fff;
+  }
+  .setsumei1 h2{
+    font-size: 20px;
+    margin-top: 5%;
+  }
+  .explode{
 
+    padding: 0;
+    width: 100%;
+    margin: auto;
+  }
+  .video1{
+    text-align: center;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+  }
 }
 
-@media (min-width: 768px){
+@media (max-width: 544px){
 
 }
