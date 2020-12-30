@@ -12,7 +12,9 @@
 .slider p{
   color: #000;
 }
-
+.margin{
+  height: 30px;
+}
 .member{
   display: inline-block;
   background-color: #FFF;
