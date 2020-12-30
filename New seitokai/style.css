@@ -151,11 +151,13 @@ section{
   .explode{
 
     padding: 0;
-    width: 100%;
+    width: 50%;
     margin: auto;
   }
   .video1{
+    position: relative;
     text-align: center;
+    width: 100%;
     margin-right: 0;
     margin-left: 0;
     padding: 0;
