@@ -1,3 +1,12 @@
+.navbar-brand{
+  margin-left: 40px;
+  width: 30%;
+  min-width: 200px;
+}
+.navbar{
+  margin-top: 0;
+  min-width: 30%;
+}
 .hoge1{
   margin-right: 50px;
 }
