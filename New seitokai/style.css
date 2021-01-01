@@ -136,15 +136,39 @@ section{
   top: 0;
   margin-left: 50%;
 }
-
+.setsumei2{
+  height: 100%;
+  position: relative;
+}
+.setsumei2 h2,p{
+  margin-left: 10%;
+  color: #fff;
+}
+.setsumei2 h2{
+  margin-top: 0;
+}
 
 
 @media (max-width: 992px){
+  .setsumei1{
+    height: 80%;
+  }
+  .setsumei1 h2{
+    font-size: 20px;
+    margin-top: 5%;
+  }
+  .setsumei2{
+    height: 80%;
+  }
+  .setsumei2 h2{
+    font-size: 20px;
+    margin-top: 0;
+  }
 
 }
 @media (max-width: 768px){
   .setsumei1{
-    height: 100%;
+    height: 80%;
     text-align: center;
   }
   .setsumei1 h2,p{
@@ -156,6 +180,20 @@ section{
   .setsumei1 h2{
     font-size: 20px;
     margin-top: 5%;
+  }
+  .setsumei2{
+    height: 80%;
+    text-align: center;
+  }
+  .setsumei2 h2,p{
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+    color: #fff;
+  }
+  .setsumei2 h2{
+    font-size: 20px;
+    margin-top: 0;
   }
   .explode{
 
