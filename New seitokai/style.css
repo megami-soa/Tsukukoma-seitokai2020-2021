@@ -90,7 +90,7 @@ a p{
 }
 
 .maintitle{
-  height: 20%;
+  height: 12vw;
 }
 .main{
   height: 100%;
@@ -106,8 +106,8 @@ section{
   line-height: 130%;
   color: #ACB6E5;/*非対応のブラウザでの文字色を設定*/
   background-image: url(images/BK_smoke.png);
-  background-size: 100% 100%;
-  background-position: absolute;
+  background-size: auto 100vh;
+  background-position: calc(-78.8vh + 50vw) 0vh;
   background-attachment: fixed;
   -webkit-background-clip: text;/*テキストでくり抜く*/
   -webkit-text-fill-color: transparent;/*くり抜いた部分は背景を表示*/
