@@ -170,14 +170,21 @@ footer{
 }
 .foo{
   color: #fff;
-  padding-left: 5%;
-  padding-top: 1%;
 }
 .foo h3{
   font-size: 2.5vw;
+  margin-left: 5%;
+  padding-top: 3%;
 }
 .copy{
   text-align: center;
+  margin:0;
+}
+.copy p{
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  
 }
 @media (max-width: 992px){
   .setsumei1{
