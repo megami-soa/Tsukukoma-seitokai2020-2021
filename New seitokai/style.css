@@ -179,12 +179,17 @@ footer{
 .copy{
   text-align: center;
   margin:0;
+    padding-top: 10%;
 }
 .copy p{
+  color: #fff;
   margin-left: 0;
   margin-right: 0;
   padding: 0;
-  
+}
+.copy.hosoku p{
+  color: #fff;
+  font-size: 1vw;
 }
 @media (max-width: 992px){
   .setsumei1{
@@ -210,6 +215,7 @@ footer{
   }
 
 }
+
 @media (max-width: 768px){
   .setsumei1{
     height: 80%;
