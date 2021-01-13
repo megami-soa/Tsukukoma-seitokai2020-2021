@@ -18,6 +18,9 @@ p{
   color:#000;
   margin: 0;
 }
+.nav{
+  box-shadow: 0 0;
+}
 .navbar-brand{
   margin-left: 40px;
   width: 30%;
