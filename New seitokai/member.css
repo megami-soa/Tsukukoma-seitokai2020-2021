@@ -131,7 +131,7 @@ background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, rgba(1
 
 #member_img{
   position: relative;
-  max-width: min(90%,50vw);
+  max-width: min(90%,40vw);
   max-height: 90%;
   top: 50%;
   transform: translate(0%,-40%);
@@ -151,7 +151,7 @@ background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, rgba(1
 #member_job{
   position: absolute;
   bottom: -2vh;
-  height: 3vw;
+  height: auto;
   font-weight: 200;
   font-size: 2.6vmax;
   color: white;
@@ -194,7 +194,6 @@ background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, rgba(1
     left: 2vw;
     bottom: 0;
     width: 50%;
-    height: auto;
   }
   #member_title{
     left: 1vw;
@@ -205,6 +204,7 @@ background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, rgba(1
     grid-row: span 1;
   }
   #member_img{
+    top: 50%;
     transform: translate(0,-50%);
   }
 }
