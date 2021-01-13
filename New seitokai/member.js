@@ -10,6 +10,12 @@ let member_data = {
         did: "う　し　た　ぷ　に　き　あ　く　ん　笑　王国　二代国王　笑",
         text: "I am a ushi.",
         pic: "medama.png"
+    },
+    "生徒会の偉い人": {
+        job: "生徒会超会長",
+        did: "う　し　た　ぷ　に　き　あ　く　ん　笑　帝国　初代帝王　笑",
+        text: "俺は金冠だけど、君は？ 笑",
+        pic: "tourist.jpg"
     }
 }
 
