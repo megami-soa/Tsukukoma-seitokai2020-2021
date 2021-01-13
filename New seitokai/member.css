@@ -34,6 +34,7 @@
   background-color: #FFF;
   border-radius: 10px;
   align-content: center;
+  cursor: pointer;
 }
 .member_name{
   margin: 10% auto;
@@ -62,6 +63,7 @@
   transform: scale(.8);
   opacity: 0.3;
   transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  outline: none;
 }
 .slick-current {
   transform: scale(1);
@@ -72,4 +74,98 @@
 .our_slider{
   align-content: center;
   padding: 0;
+}
+
+#member_show{
+  display: none;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+#member_div{
+  position: relative;
+  opacity: 1;
+  background-color: rgba(125,125,125,0);
+background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, rgba(125,125,125,0.5)), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, rgba(125,125,125,0.5)),color-stop(.75, rgba(125,125,125,0.5)), color-stop(.75, transparent),to(transparent));
+-webkit-background-size: 7px 7px;
+  width: 70vw;
+  min-width: 500px;
+  height: 60vh;
+  min-height: 400px;
+  top: 50vh;
+  transform: translate(0,-50%);
+  margin: auto;
+  z-index: 9999;
+  display: grid;
+  grid-template-columns:  1fr 2fr;
+  grid-template-rows: 1fr 2fr 3fr 5fr;
+  border-radius: 2vmax;
+}
+
+#show_background{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.8;
+}
+#member_title{
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  color: white;
+  height: 100%;
+  font-size: max(3vw, 5vh);
+  top: 50%;
+  transform: translate(0, -25%);
+  text-align: left;
+  width: 100%;
+  margin: auto;
+
+}
+
+#member_img{
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  top: 50%;
+  transform: translate(0%,-40%);
+}
+#member_img_container{
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+}
+
+#member_text{
+  grid-column: 1 / 3;
+  grid-row: 4 / 5;
+  margin: 5%;
+  text-align: left;
+}
+#member_job{
+  position: relative;
+  top: 2vh;
+  height: 100%;
+  font-weight: 200;
+  color: white;
+  text-align: left;
+  width: 40%;
+  border-bottom: white thin  solid;
+  margin: 0;
+}
+
+#member_did{
+  background-color: rgba(255,255,255,0.8);
+  width: 95%;
+  border-radius: 1vmax;
+  margin: 0;
+  padding: 1vmin 2vmin;
+  text-align: left;
+  color: black;
 }
