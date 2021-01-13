@@ -221,7 +221,7 @@ footer{
 
 @media (max-width: 768px){
   .setsumei1{
-    height: 80%;
+    height: 60%;
     text-align: center;
   }
   .setsumei1 h2,p{
@@ -230,12 +230,16 @@ footer{
     padding: 0;
     color: #fff;
   }
+  .setsumei1 p{
+    margin-bottom: 2.5%;
+    font-size: 12px;
+  }
   .setsumei1 h2{
     font-size: 20px;
     margin-top: 5%;
   }
   .setsumei2{
-    height: 80%;
+    height: 60%;
     text-align: center;
   }
   .setsumei2 h2,p{
@@ -243,6 +247,10 @@ footer{
     margin-left: 0;
     padding: 0;
     color: #fff;
+  }
+  .setsumei2 p{
+    margin-bottom: 2.5%;
+    font-size: 12px;
   }
   .setsumei3 h2{
     font-size: 20px;
@@ -257,6 +265,10 @@ footer{
     margin-left: 0;
     padding: 0;
     color: #fff;
+  }
+  .setsumei3 p{
+    margin-bottom: 2.5%;
+    font-size: 12px;
   }
   .setsumei3 h2{
     font-size: 20px;
