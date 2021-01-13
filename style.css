@@ -222,6 +222,7 @@ footer{
 @media (max-width: 768px){
   .setsumei1{
     height: 70%;
+    margin-bottom: 10%;
     text-align: center;
   }
   .setsumei1 h2,p{
@@ -240,6 +241,7 @@ footer{
   }
   .setsumei2{
     height: 70%;
+    margin-bottom: 10%;
     text-align: center;
   }
   .setsumei2 h2,p{
@@ -258,6 +260,7 @@ footer{
   }
   .setsumei3{
     height: 30%;
+    margin-bottom: 10%;
     text-align: center;
   }
   .setsumei3 h2,p{
