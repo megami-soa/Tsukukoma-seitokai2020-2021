@@ -223,6 +223,9 @@ footer{
   body{
     font-family: 'Noto Sans JP', sans-serif;
   }
+  h1{
+    font-size: 17.5px;
+  }
   .setsumei1{
     min-height: 70%;
     padding-bottom: 10%;
